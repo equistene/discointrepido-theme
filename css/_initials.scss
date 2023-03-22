@@ -1,0 +1,114 @@
+$primary: #dfc12a;
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: table;
+  margin: 0 auto;
+  &.full {
+    max-width: 100%;
+  }
+}
+
+a,
+a:hover {
+  transition: 0.3s;
+}
+
+.itemsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  @include respond-to($large-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    clear: both;
+  }
+  &.cols-3 {
+    @include respond-to($large-desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+      clear: both;
+    }
+  }
+  .item-product {
+    border: 1px solid #000;
+    a {
+      display: table;
+      color: #000;
+      width: 100%;
+      height: 100%;
+      .thumb {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .info {
+        padding: 1rem;
+        @include respond-to($large-desktop) {
+          padding: 2rem;
+        }
+        h2 {
+          font-size: 2.4em;
+          font-weight: 600;
+          margin: 0;
+          padding: 0 0 6px 0;
+          hyphens: auto;
+        }
+        h3 {
+          font-size: 1.8em;
+          font-weight: 500;
+          margin: 0;
+          padding: 0 0 6px 0;
+        }
+        p {
+          font-size: 1.4em;
+          font-weight: normal;
+          margin: 0;
+          padding: 0;
+        }
+      }
+      &:hover {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+}
+
+nav.woocommerce-breadcrumb {
+  font-size: 1.4rem !important;
+  padding: 3rem 0 1rem !important;
+  margin: 0 auto !important;
+  @include respond-to($phone) {
+    display: none !important;
+  }
+}
+
+.material-icons-outlined {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}

@@ -1,0 +1,269 @@
+header {
+  background: #000;
+  position: relative;
+  .container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include respond-to($large-desktop) {
+      padding: 10px 20px;
+    }
+    a.logo {
+      display: inline-flex;
+      color: #fff;
+      img {
+        max-height: 50px;
+        @include respond-to($large-desktop) {
+          max-height: 40px;
+        }
+      }
+      h1 {
+        font-size: 2.2rem;
+        font-weight: 900;
+        letter-spacing: -1px;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        @include respond-to($large-desktop) {
+          font-size: 3.1rem;
+          letter-spacing: -1.7px;
+        }
+      }
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+    button.menuHeader {
+      display: block;
+      background: none;
+      border: none;
+      color: #fff;
+      padding: 0;
+      margin: 0;
+      font-size: 2rem;
+      @include respond-to($large-desktop) {
+        display: none;
+      }
+    }
+    nav {
+      @include respond-to($phone) {
+        display: none;
+      }
+      > ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        > li {
+          font-size: 1.8rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          margin: 0 10px;
+          position: relative;
+          &.menu-item-has-children {
+            &:after {
+              content: "▼";
+              color: $primary;
+              font-size: 0.85rem;
+            }
+          }
+          a {
+            color: #fff;
+            &:hover {
+              color: $primary;
+            }
+          }
+          ul.sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 20;
+            background: #000;
+            list-style: none;
+            margin: 0;
+            padding: 1rem;
+            transform: translate(-1rem, 0);
+            li {
+              a {
+                font-size: 1.4rem;
+                &:hover {
+                  color: $primary;
+                }
+              }
+            }
+          }
+          &:hover {
+            ul.sub-menu {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 16px;
+      @include respond-to($large-desktop) {
+        min-width: 220px;
+      }
+      a.cart-customlocation {
+        background: rgba(255, 255, 255, 0.8);
+        color: #000;
+        font-size: 1.4rem;
+        padding: 6px 12px;
+        border-radius: 40px;
+        &:hover {
+          background: $primary;
+        }
+        @include respond-to($phone) {
+          position: fixed;
+          bottom: 10px;
+          left: 50%;
+          transform: translate(-50%, 0);
+          border: 1px solid #000;
+          z-index: 9999;
+          background: #fff;
+          font-size: 1.6rem;
+          width: 80%;
+          text-align: center;
+        }
+      }
+    }
+    button.headerSearch {
+      display: inline-flex;
+      background: none;
+      border: none;
+      color: #fff;
+      padding: 0;
+      margin: 0;
+      font-size: 2rem;
+      &:hover {
+        color: $primary;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+section.featuredNews {
+  background: var(--primary-color);
+  color: #000;
+  a {
+    display: block;
+    color: #000;
+    padding: 10px;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    &:hover {
+      text-decoration: line-through;
+    }
+  }
+}
+
+.product-search-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 0;
+  border-bottom: 2px solid #000;
+  z-index: 9999;
+  @include respond-to($large-desktop) {
+    padding: 10px;
+  }
+  .container {
+    form.search,
+    form.woocommerce-product-search {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      input {
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid #000;
+        background: none;
+        width: 100%;
+        color: #000;
+        text-transform: uppercase;
+        font-size: 1.4em;
+        -webkit-appearance: none;
+      }
+      button {
+        border: none;
+        padding: 8px 10px;
+        text-transform: uppercase;
+        background: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        color: #000;
+        outline: none;
+        transition: 0.2s;
+        @include respond-to($large-desktop) {
+          padding: 8px 20px;
+        }
+        &:hover {
+          background: #444;
+          color: $primary;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+section.menu-mobile-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #fff;
+  border-bottom: 2px solid #000;
+  nav {
+    padding: 0;
+    margin: 0;
+    > ul {
+      padding: 0;
+      li {
+        a {
+          font-weight: 600;
+          display: block;
+          text-align: center;
+          font-size: 2.4rem;
+          text-transform: uppercase;
+          padding: 8px;
+        }
+        ul.sub-menu {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin: 0;
+          padding: 0;
+          li {
+            a {
+              background: rgba(#000, 0.02);
+              border-radius: 4px;
+              padding: 4px 6px;
+              font-size: 1.4rem;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+footer {
+  background: #000;
+  color: #fff;
+  .container {
+    padding: 20px 10px;
+    @include respond-to($large-desktop) {
+      padding: 40px 0;
+    }
+    .row {
+      padding: 10px 0;
+      @include respond-to($large-desktop) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      .col {
+        padding: 0;
+        @include respond-to($phone) {
+          width: 100%;
+          display: block;
+        }
+        @include respond-to($large-desktop) {
+          padding: 0;
+        }
+        .social {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          margin: 0;
+          padding: 20px 0 0;
+          @include respond-to($large-desktop) {
+            justify-content: flex-start;
+            padding: 0;
+          }
+          a {
+            font-size: 2rem;
+            color: #fff;
+            display: table;
+            margin: 0 10px 0 0;
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+        .tagline {
+          p {
+            font-size: 2em;
+          }
+        }
+        nav {
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            @include respond-to($large-desktop) {
+              justify-content: flex-end;
+            }
+            li {
+              margin: 0;
+              font-size: 1.8em;
+              font-weight: 500;
+              text-transform: uppercase;
+              a {
+                color: #fff;
+                &:hover {
+                  color: $primary;
+                }
+              }
+              ul.sub-menu {
+                display: none;
+              }
+            }
+          }
+        }
+        p {
+          font-size: 1.4em;
+          margin: 0;
+          padding: 0;
+          @include respond-to($phone) {
+            text-align: center;
+          }
+        }
+        .terms {
+          display: block;
+          padding: 0 0 20px 0;
+          @include respond-to($large-desktop) {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0;
+          }
+          ul {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            gap: 12px;
+            @include respond-to($large-desktop) {
+              justify-content: flex-start;
+            }
+            li {
+              list-style: none;
+              a {
+                color: #fff;
+                font-size: 1.4em;
+                margin: 0 20px 0 0;
+                @include respond-to($phone) {
+                  display: block;
+                  text-align: center;
+                  margin: 10px auto;
+                }
+                &:hover {
+                  color: $primary;
+                }
+              }
+              ul.sub-menu {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

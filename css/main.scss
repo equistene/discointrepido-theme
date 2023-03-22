@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap");
+
+html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 300 10px/1 "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+@import "_clear.scss";
+@import "_misc";
+@import "_wpcore";
+@import "_mediaqueries.scss";
+@import "_typography.scss";
+@import "_mixins.scss";
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+@import "_initials";
+@import "_header";
+@import "_home";
+@import "_product";
+@import "_artists";
+@import "_archives";
+@import "_woocustom";
+@import "_pages";
+@import "_footer";

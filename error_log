@@ -1,0 +1,16 @@
+[13-Dec-2022 14:25:23 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/discoint/public_html/wp-content/themes/intrepidal/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/discoint/public_html/wp-content/themes/intrepidal/index.php on line 1
+[13-Dec-2022 14:25:23 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/discoint/public_html/wp-content/themes/intrepidal/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/discoint/public_html/wp-content/themes/intrepidal/index.php on line 1
+[13-Dec-2022 14:25:33 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/discoint/public_html/wp-content/themes/intrepidal/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/discoint/public_html/wp-content/themes/intrepidal/index.php on line 1
+[13-Dec-2022 14:43:00 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/discoint/public_html/wp-content/themes/intrepidal/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/discoint/public_html/wp-content/themes/intrepidal/index.php on line 1
