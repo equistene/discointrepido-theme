@@ -17,7 +17,7 @@ a:hover {
 
 .itemsList {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
   @include respond-to($large-desktop) {
     grid-template-columns: repeat(4, 1fr);
@@ -40,6 +40,14 @@ a:hover {
       color: #000;
       width: 100%;
       height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 2fr;      
+      place-items: center;
+      @include respond-to($large-desktop){
+        display: table;      
+        width: 100%;
+        height: 100%;
+      }
       .thumb {
         img {
           width: 100%;
@@ -48,6 +56,7 @@ a:hover {
       }
       .info {
         padding: 1rem;
+        width: 100%;
         @include respond-to($large-desktop) {
           padding: 2rem;
         }
